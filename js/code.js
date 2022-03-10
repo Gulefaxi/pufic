@@ -4,7 +4,7 @@ export let canvas = document.getElementById("back");
 export let context = canvas.getContext("2d");
 export let smth = {
  started: false, //началась игра или нет
- nte:72, //кол-во кирпичей для победы
+ nte:54, //кол-во кирпичей для победы
  level: 0, //уровень
 missnum: 3, //кол-во жизней +1
 breakedbricks: 0, //сломано кирпичей
