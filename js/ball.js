@@ -7,7 +7,7 @@ export let ball = {
   color: "white",
   //   x: canvas.height / 4,
   //   y: canvas.height / 4,
-  dx: 3,
+  dx: 5,
   dy: -10,
   draw() {
     context.beginPath();
@@ -29,11 +29,12 @@ export let ball = {
       this.dy = -this.dy;
     }
   },
+
   rebound() {
     if (this.y + this.dy > rack.y && this.y + this.dy < rack.y + rack.height) {
       if (
-        this.x + this.dx > rack.x &&
-        this.x + this.dx < rack.x + rack.width - 6
+        this.x + this.dx > rack.x - this.radius &&
+        this.x + this.dx < rack.x + rack.width + this.radius
       ) {
         this.dy = -this.dy;
       }
@@ -42,7 +43,7 @@ export let ball = {
   beforestart() {
     if (smth.started == false) {
       ball.x = rack.x + 50;
-      ball.y = rack.y - 10
+      ball.y = rack.y - 10;
     }
   },
 
@@ -50,12 +51,11 @@ export let ball = {
     if (smth.started == false) {
       context.font = "40px serif";
       context.fillStyle = "white";
-      context.fillText("Press Space", 1038 , 70);
+      context.fillText("Press Space", 1038, 70);
       context.fillText("to start or continue", 1032, 110);
     }
     context.font = "40px serif";
     context.fillStyle = "white";
     context.fillText("A-right, D-left", 1032, 670);
   },
- 
 };
