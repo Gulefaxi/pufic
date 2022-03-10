@@ -1,7 +1,7 @@
 import { ball } from "./ball";
 import { context, smth } from "./code";
 
-let brickwidth = 55;
+let brickwidth = 80;
 let brickheight = 15;
 let brickcolor = "darkblue";
 let offsetleft = 30;
@@ -9,7 +9,7 @@ let offsetdown = 80;
 let padding = 27;
 export let settin ={
  brickrows: 6,
- brickcolumns: 12,
+ brickcolumns: 9,
 }
 export let bricks = [];
 for (let c = 0; c < settin.brickcolumns; c++) {
@@ -52,6 +52,7 @@ export function collision(){
          ball.dy = -ball.dy
          b.status = false
         smth.breakedbricks++
+        smth.albreakbricks++
         }
       }  
     }

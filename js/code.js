@@ -4,11 +4,12 @@ export let canvas = document.getElementById("back");
 export let context = canvas.getContext("2d");
 export let smth = {
  started: false, //началась игра или нет
- nte:72, //кол-во кирпичей для победы
+ nte:2, //кол-во кирпичей для победы
  level: 0, //уровень
-missnum: 3, //жизни
+missnum: 3, //кол-во жизней +1
 breakedbricks: 0, //сломано кирпичей
 btlevel: false, //переменная для паузы между уровнями
+albreakbricks: 0 //все сломанные кирпичи
 }
 
 function fallpast() { //упал или нет мячик за границу
@@ -46,6 +47,9 @@ if (smth.level == 3 && smth.breakedbricks == smth.nte){
   context.font = "75px verdana";
       context.fillStyle = "blue";
       context.fillText("You completed game", 380, 200);
+      context.font = "55px verdana";
+      context.fillText("you break" + " " + smth.albreakbricks + " " + "bricks and you completed" + " " + smth.level + " " + "levels", 80, 600);
+      context.font = "75px verdana";
       context.fillText("press f5 for restart", 380, 400);
       smth.started = false
   }
