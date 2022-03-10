@@ -58,6 +58,8 @@ if (smth.level == 3 && smth.breakedbricks == smth.nte){
     context.font = "75px verdana";
         context.fillStyle = "blue";
         context.fillText("You loose", 420, 200);
+        context.font = "55px verdana";
+      context.fillText("you break" + " " + smth.albreakbricks + " " + "bricks and you completed" + " " + smth.level + " " + "levels", 80, 600);
         context.fillText("press f5 for restart", 380, 400);
         smth.started = false
   }
