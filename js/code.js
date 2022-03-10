@@ -4,7 +4,7 @@ export let canvas = document.getElementById("back");
 export let context = canvas.getContext("2d");
 export let smth = {
  started: false, //началась игра или нет
- nte:2, //кол-во кирпичей для победы
+ nte:72, //кол-во кирпичей для победы
  level: 0, //уровень
 missnum: 3, //кол-во жизней +1
 breakedbricks: 0, //сломано кирпичей
@@ -81,7 +81,7 @@ function keyUpHandler(key) {
     rack.leftPressed = false;
   }
 }
-export let border = { //тёмная часть в левой части экрана
+export let border = { //тёмная часть в правой части экрана
   x: 1012,
   y: 0,
   width: 348,
