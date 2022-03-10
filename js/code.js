@@ -48,7 +48,7 @@ if (smth.level == 3 && smth.breakedbricks == smth.nte){
       context.fillStyle = "blue";
       context.fillText("You completed game", 380, 200);
       context.font = "55px verdana";
-      context.fillText("you break" + " " + smth.albreakbricks + " " + "bricks and you completed" + " " + smth.level + " " + "levels", 50, 600);
+      context.fillText("you break" + " " + smth.albreakbricks + " " + "bricks and you completed" + " " + smth.level + " " + "levels", 20, 600);
       context.font = "75px verdana";
       context.fillText("press f5 for restart", 380, 400);
       smth.started = false
@@ -59,7 +59,7 @@ if (smth.level == 3 && smth.breakedbricks == smth.nte){
         context.fillStyle = "blue";
         context.fillText("You loose", 420, 200);
         context.font = "55px verdana";
-      context.fillText("you break" + " " + smth.albreakbricks + " " + "bricks and you completed" + " " + smth.level + " " + "levels", 50, 600);
+      context.fillText("you break" + " " + smth.albreakbricks + " " + "bricks and you completed" + " " + smth.level + " " + "levels", 20, 600);
         context.fillText("press f5 for restart", 380, 400);
         smth.started = false
   }
