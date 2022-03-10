@@ -3,15 +3,15 @@ import {  bricks, collision, drawbricks, settin } from "./bricks";
 export let canvas = document.getElementById("back");
 export let context = canvas.getContext("2d");
 export let smth = {
- started: false,
- nte:2,
- level: 0,
-missnum: 3,
-breakedbricks: 0,
-btlevel: false,
+ started: false, //началась игра или нет
+ nte:72, //кол-во кирпичей для победы
+ level: 0, //уровень
+missnum: 3, //жизни
+breakedbricks: 0, //сломано кирпичей
+btlevel: false, //переменная для паузы между уровнями
 }
 
-function fallpast() {
+function fallpast() { //упал или нет мячик за границу
   if ( ball.y + ball.dy > 790){
     smth.started = false
     smth.missnum -= 1
@@ -77,7 +77,7 @@ function keyUpHandler(key) {
     rack.leftPressed = false;
   }
 }
-export let border = {
+export let border = { //тёмная часть в левой части экрана
   x: 1012,
   y: 0,
   width: 348,
@@ -87,7 +87,7 @@ export let border = {
     context.fillStyle = this.color;
     context.fillRect(this.x, this.y, this.width, this.height);
   },
-  score() {
+  score() { //счёт жизней/уровня/кол-во сломаных кирпичей
     context.font = "40px serif";
       context.fillStyle = "white";
       context.fillText("level" + " " + smth.level, 1120 , 310);
